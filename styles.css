@@ -14,6 +14,7 @@ body {
   padding: 20px;
   border-radius: 10px;
   background-color: #fff;
+  width: 300px;
 }
 
 button {
@@ -30,15 +31,54 @@ button:hover {
   background-color: #0056b3;
 }
 
-input {
+input, select {
   padding: 10px;
   margin: 10px;
   font-size: 16px;
-  width: 200px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-select {
+h3 {
+  margin-top: 20px;
+}
+
+ul {
+  text-align: left;
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li button {
+  background-color: #ff5c5c;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+li button:hover {
+  background-color: #ff3333;
+}
+
+#attendance-summary li {
+  border-bottom: 1px solid #ddd;
+}
+
+#error-message {
+  margin-top: 10px;
+}
+
+#subject-select {
+  width: 100%;
   padding: 10px;
-  margin: 10px;
-  font-size: 16px;
+  margin-top: 10px;
 }
