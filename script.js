@@ -14,6 +14,7 @@ const addSubjectBtn = document.getElementById('add-subject-btn');
 const attendanceSummary = document.getElementById('attendance-summary');
 const subjectList = document.getElementById('subject-list');
 
+
 // Event Listener for Login Button
 loginBtn.addEventListener('click', () => {
   const enteredPassword = passwordInput.value;
