@@ -45,7 +45,7 @@ addSubjectBtn.addEventListener('click', () => {
   const subjectName = subjectNameInput.value.trim();
   
   if (subjectName !== '') {
-    let subjects = JSON.parse(localStorage.getItem('subjects')) || [];
+    let subjects = JSON.parse(localStorage.getItem('subjects')) || ["Geotech", "Structural", "Environmental", "Transportation", "MA-203"];
     subjects.push(subjectName);
     localStorage.setItem('subjects', JSON.stringify(subjects));
     
