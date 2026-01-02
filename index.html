@@ -1,55 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Attendance App</title>
-   <link rel="icon" href="icon.png">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="icon.png" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Login Form -->
-  <div id="login-container">
+
+  <!-- Login -->
+  <div id="login-container" class="card">
     <h2>Login</h2>
-    <label for="password">Enter 4-digit password:</label>
-    <input type="password" id="password" maxlength="4" placeholder="Enter password" />
+    <input type="password" id="password" maxlength="4" placeholder="4-digit password" />
     <button id="login-btn">Login</button>
-    <p id="error-message" style="color: red; display: none;">Invalid password, try again.</p>
+    <p id="error-message">Invalid password</p>
   </div>
 
-  <!-- Attendance Form (hidden initially) -->
-  <div id="attendance-container" style="display:none;">
-    <h2>Welcome <span id="user-name"></span></h2>
-    <button id="logout-btn">Logout</button>
-    
-    <!-- Add Subject Section -->
-    <h3>Add New Subject</h3>
-    <input type="text" id="subject-name" placeholder="Enter subject name" />
-    <button id="add-subject-btn">Add Subject</button>
+  <!-- Attendance -->
+  <div id="attendance-container" class="card hidden">
+    <div class="top-bar">
+      <h2>Welcome <span id="user-name"></span></h2>
+      <div>
+        <button id="theme-toggle">🌙</button>
+        <button id="logout-btn">Logout</button>
+      </div>
+    </div>
+
+    <h3>Add Subject</h3>
+    <input type="text" id="subject-name" placeholder="Subject name" />
+    <button id="add-subject-btn">Add</button>
 
     <h3>Mark Attendance</h3>
     <select id="subject-select">
       <option value="">Select Subject</option>
     </select>
-    <button id="present-btn">Present</button>
-    <button id="absent-btn">Absent</button>
-    
-    <!-- Display Attendance Count -->
-    <h3>Attendance Summary</h3>
-    <ul id="attendance-summary">
-      <!-- Attendance counts will be listed here -->
-    </ul>
+    <div class="btn-row">
+      <button id="present-btn" class="success">Present</button>
+      <button id="absent-btn" class="danger">Absent</button>
+    </div>
 
-    <!-- Subject List with Delete Option -->
+    <h3>Attendance Summary</h3>
+    <ul id="attendance-summary"></ul>
+
     <h3>Manage Subjects</h3>
-    <ul id="subject-list">
-      <!-- Subject list with delete buttons will be here -->
-       <li>Geotech</li>
-       <li>Structural</li>
-       <li>Environmental</li>
-       <li>Transportation</li>
-       <li>MA-203</li>
-    </ul>
+    <ul id="subject-list"></ul>
   </div>
 
   <script src="script.js"></script>
